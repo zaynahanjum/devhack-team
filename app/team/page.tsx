@@ -174,9 +174,6 @@ export default function TeamDashboardPage() {
                 {profile?.participants.length ?? 0} Members
               </Badge>
             </div>
-            <CardDescription>
-              Assigned hackathon room.
-            </CardDescription>
           </CardHeader>
 
           <CardContent className="space-y-4">
@@ -230,9 +227,6 @@ export default function TeamDashboardPage() {
                 </Badge>
               ) : null}
             </div>
-            <CardDescription>
-              Submit problem statement early and final deliverables at hackathon close.
-            </CardDescription>
           </CardHeader>
 
           <CardContent className="space-y-3.5">

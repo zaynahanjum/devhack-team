@@ -112,15 +112,6 @@ export function TeamShell({ children }: { children: React.ReactNode }) {
             <div className="flex items-center gap-2 lg:mt-4 lg:flex-col lg:w-full">
               <Button
                 className="lg:w-full"
-                onClick={() => setChangePasswordOpen(true)}
-                size="sm"
-                variant="outline"
-              >
-                <KeyRound className="size-4" />
-                <span className="hidden sm:inline lg:inline">Password</span>
-              </Button>
-              <Button
-                className="lg:w-full"
                 onClick={() => void handleSignOut()}
                 size="sm"
                 variant="outline"
