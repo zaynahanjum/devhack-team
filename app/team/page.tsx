@@ -296,7 +296,7 @@ export default function TeamDashboardPage() {
               href="/team/submissions"
               className={buttonVariants({ className: "w-full rounded-xl" })}
             >
-              <span>Open Submissions Tab</span>
+              <span>Open Submissions Hub</span>
               <ArrowRight className="ml-1.5 size-4" />
             </Link>
           </CardFooter>
