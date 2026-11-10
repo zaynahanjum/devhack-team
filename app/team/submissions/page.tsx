@@ -63,8 +63,8 @@ export default function TeamSubmissionsPage() {
       {/* Page Title & Controls */}
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="font-heading text-2xl sm:text-3xl font-bold tracking-tight">
-            Team Submissions Hub
+          <h1 className="font-norse-bold text-2xl sm:text-3xl font-bold tracking-wide">
+            Team Submissions
           </h1>
           <p className="text-sm text-muted-foreground mt-0.5">
             Submit your problem statement, solution, and final project deliverables when windows are open.

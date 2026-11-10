@@ -51,7 +51,7 @@ export default function TeamTimelinePage() {
       {/* Page Title & Controls */}
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="font-heading text-2xl sm:text-3xl font-bold tracking-tight">
+          <h1 className="font-norse-bold text-2xl sm:text-3xl font-bold tracking-wide">
             Hackathon Timeline
           </h1>
           <p className="text-sm text-muted-foreground mt-0.5">

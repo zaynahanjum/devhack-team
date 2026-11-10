@@ -136,7 +136,7 @@ export default function TeamDashboardPage() {
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div className="space-y-1">
           <div className="flex flex-wrap items-center gap-2.5">
-            <h1 className="font-heading text-2xl sm:text-3xl font-bold tracking-tight">
+            <h1 className="font-norse-bold text-2xl sm:text-3xl font-bold tracking-wide">
               {profile?.name ?? "Team Dashboard"}
             </h1>
             {profile?.isTopTen ? (
@@ -296,7 +296,7 @@ export default function TeamDashboardPage() {
               href="/team/submissions"
               className={buttonVariants({ className: "w-full rounded-xl" })}
             >
-              <span>Open Submissions Hub</span>
+              <span>Open Submissions Tab</span>
               <ArrowRight className="ml-1.5 size-4" />
             </Link>
           </CardFooter>

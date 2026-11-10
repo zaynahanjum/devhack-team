@@ -11,7 +11,7 @@ import {
   UserRound,
   Users,
 } from "lucide-react";
-
+import Image from "next/image"
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { teamApi } from "@/lib/team/api";
@@ -61,26 +61,20 @@ export default function TeamLoginPage() {
 
       <section className="relative z-10 w-full max-w-lg rounded-2xl border border-border bg-card p-8 shadow-2xl shadow-foreground/10 sm:p-10">
         <div className="mb-8">
-          <div className="mb-8 flex items-center justify-between gap-5">
-            <div className="flex items-center gap-3">
-              <div className="flex size-10 items-center justify-center rounded-lg bg-primary text-sm font-bold text-primary-foreground">
-                {"</>"}
-              </div>
-              <div>
-                <p className="text-sm font-semibold text-foreground">Devhack</p>
-                <p className="text-xs text-muted-foreground">SOSC</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-1.5 rounded-full border border-border bg-muted/50 px-3 py-1 text-xs font-semibold text-muted-foreground">
-              <Users className="size-3.5 text-primary" />
-              <span>Team Portal</span>
-            </div>
+          <div className="mb-8 flex flex-row items-center justify-between">
+            <h1 className="mt-3 font-norse-bold text-4xl sm:text-5xl font-bold tracking-wide text-card-foreground">
+              Team Login
+            </h1>
+            <Image
+              src="/images/DVHST.png"
+              alt="devhost-logo"
+              width={300}
+              height={100}
+              className="w-auto h-10"
+            />
           </div>
-          <h1 className="mt-2 font-heading text-3xl font-semibold tracking-tight text-card-foreground sm:text-4xl">
-            Team Sign in
-          </h1>
           <p className="mt-1.5 text-sm text-muted-foreground">
-            Sign in with your team username and credentials to access your submissions, rooms, and schedule.
+            Sign in with your team credentials.
           </p>
         </div>
 
@@ -162,7 +156,7 @@ export default function TeamLoginPage() {
             {isSubmitting ? (
               <LoaderCircle className="animate-spin mr-2 size-4" aria-hidden="true" />
             ) : null}
-            {isSubmitting ? "Signing in…" : "Sign in to Dashboard"}
+            {isSubmitting ? "Signing in…" : "Sign in"}
             {!isSubmitting ? <ArrowRight className="ml-2 size-4" aria-hidden="true" /> : null}
           </Button>
 
