@@ -10,7 +10,6 @@ import {
   FileCode2,
   Lock,
   MapPin,
-  Sparkles,
   Unlock,
   Users,
 } from "lucide-react";
@@ -74,11 +73,10 @@ export default function TeamDashboardPage() {
     return () => clearInterval(timer);
   }, [loadDashboardData]);
 
-  // Real-time auto-refresh on admin updates (locks, timeline, team room, finalists)
+  // Real-time auto-refresh on admin updates (locks, timeline, team room)
   useRealtimeEvents(getTeamSession()?.accessToken, {
     SUBMISSION_LOCK_CHANGED: () => void loadDashboardData(true),
     TEAM_UPDATED: () => void loadDashboardData(true),
-    TOP_TEAMS_UPDATED: () => void loadDashboardData(true),
     TIMELINE_CHANGED: () => void loadDashboardData(true),
     ROUND_STATUS_CHANGED: () => void loadDashboardData(true),
   });
@@ -139,12 +137,6 @@ export default function TeamDashboardPage() {
             <h1 className="font-norse-bold text-2xl sm:text-3xl font-bold tracking-wide">
               {profile?.name ?? "Team Dashboard"}
             </h1>
-            {profile?.isTopTen ? (
-              <Badge className="bg-amber-500/15 text-amber-600 dark:text-amber-400 border-amber-500/30 gap-1 text-xs">
-                <Sparkles className="size-3" />
-                Top 10 Finalist
-              </Badge>
-            ) : null}
           </div>
           <p className="text-sm text-muted-foreground">
             Welcome to the Devhack 2026 participant portal. Manage your submissions and stay updated with the schedule.

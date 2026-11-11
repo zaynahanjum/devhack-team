@@ -9,7 +9,6 @@ export type TeamProfile = {
   id: string;
   name: string;
   username: string;
-  isTopTen: boolean;
   mustChangePassword: boolean;
   assignedRoom?: string | null;
   roomName?: string | null;
