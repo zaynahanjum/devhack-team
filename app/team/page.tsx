@@ -138,9 +138,6 @@ export default function TeamDashboardPage() {
               {profile?.name ?? "Team Dashboard"}
             </h1>
           </div>
-          <p className="text-sm text-muted-foreground">
-            Welcome to the Devhack 2026 participant portal. Manage your submissions and stay updated with the schedule.
-          </p>
         </div>
       </div>
 
@@ -305,9 +302,6 @@ export default function TeamDashboardPage() {
               </div>
               <span>Upcoming Hackathon Schedule</span>
             </CardTitle>
-            <CardDescription>
-              Key milestones, rounds, and evaluation timings.
-            </CardDescription>
           </div>
           <Link
             href="/team/timeline"

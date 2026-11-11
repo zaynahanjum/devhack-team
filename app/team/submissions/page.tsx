@@ -67,7 +67,7 @@ export default function TeamSubmissionsPage() {
             Team Submissions
           </h1>
           <p className="text-sm text-muted-foreground mt-0.5">
-            Submit your problem statement, solution, and final project deliverables when windows are open.
+            Submit your problem statement, solution, and final project deliverables when submissions are open.
           </p>
         </div>
       </div>

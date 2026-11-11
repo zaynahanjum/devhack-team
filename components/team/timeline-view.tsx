@@ -152,9 +152,6 @@ export function TimelineView({
             </div>
             <div>
               <CardTitle className="text-lg">Hackathon Schedule & Milestones</CardTitle>
-              <CardDescription>
-                Track upcoming deadlines, mentoring sessions, and round schedules.
-              </CardDescription>
             </div>
           </div>
         </CardHeader>

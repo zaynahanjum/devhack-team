@@ -111,7 +111,7 @@ export function ProblemStatementCard({
             </CardTitle>
           </div>
           <CardDescription>
-            Initial hackathon ideation submission. Required for round 1 mentoring.
+            Initial hackathon ideation submission.
           </CardDescription>
         </div>
 

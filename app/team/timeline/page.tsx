@@ -54,9 +54,6 @@ export default function TeamTimelinePage() {
           <h1 className="font-norse-bold text-2xl sm:text-3xl font-bold tracking-wide">
             Hackathon Timeline
           </h1>
-          <p className="text-sm text-muted-foreground mt-0.5">
-            Keep track of scheduled rounds, evaluation windows, and important milestones.
-          </p>
         </div>
       </div>
 
