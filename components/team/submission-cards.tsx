@@ -29,9 +29,26 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { teamApi } from "@/lib/team/api";
 import type { TeamSubmission, TeamSubmissionResponse } from "@/lib/team/types";
+
+export const PROBLEM_STATEMENTS = [
+  "1. Proof that survives the screenshot",
+  "2. The agent that fights dark patterns",
+  "3. The model changed without changing its name",
+  "4. the on-call engineer that doesnt panic",
+  "5. when the network dies",
+  "6. Knowledgable brain: memory that knows what to keep and when to forget",
+  "7. one patient, many records",
+] as const;
 
 export function ProblemStatementCard({
   submissionData,
@@ -211,19 +228,36 @@ export function ProblemStatementCard({
                   Problem Statement <span className="text-destructive">*</span>
                 </Label>
                 <span className="text-[11px] text-muted-foreground">
-                  {problemStatement.length} chars
+                  Select from tracks
                 </span>
               </div>
-              <Textarea
-                id="problem-statement"
-                placeholder="Describe the challenge or problem your team is addressing..."
-                rows={4}
-                value={problemStatement}
-                onChange={(e) => setProblemStatement(e.target.value)}
+              <Select
+                value={problemStatement || null}
+                onValueChange={(val) => setProblemStatement(val ?? "")}
                 disabled={isLocked || isSubmitting}
-                required
-                className="resize-y"
-              />
+              >
+                <SelectTrigger
+                  id="problem-statement"
+                  className="w-full rounded-xl py-2.5 h-auto text-left"
+                >
+                  <SelectValue placeholder="Select a problem statement..." />
+                </SelectTrigger>
+                <SelectContent className="max-h-72">
+                  {problemStatement &&
+                  !PROBLEM_STATEMENTS.includes(
+                    problemStatement as (typeof PROBLEM_STATEMENTS)[number],
+                  ) ? (
+                    <SelectItem value={problemStatement} className="cursor-pointer py-2">
+                      {problemStatement} (Current)
+                    </SelectItem>
+                  ) : null}
+                  {PROBLEM_STATEMENTS.map((ps) => (
+                    <SelectItem key={ps} value={ps} className="cursor-pointer py-2">
+                      {ps}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
 
             <div className="space-y-1.5">

@@ -26,7 +26,7 @@ import { ChangePasswordDialog } from "./change-password-dialog";
 const NAV_ITEMS = [
   { href: "/team", label: "Dashboard", icon: LayoutDashboard },
   { href: "/team/submissions", label: "Submissions", icon: FileCode2 },
-  { href: "/team/timeline", label: "Timeline", icon: CalendarClock },
+  // { href: "/team/timeline", label: "Timeline", icon: CalendarClock },
 ];
 
 export function TeamShell({ children }: { children: React.ReactNode }) {
