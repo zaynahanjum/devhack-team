@@ -44,10 +44,10 @@ export const PROBLEM_STATEMENTS = [
   "1. Proof that survives the screenshot",
   "2. The agent that fights dark patterns",
   "3. The model changed without changing its name",
-  "4. the on-call engineer that doesnt panic",
-  "5. when the network dies",
+  "4. The on-call engineer that doesnt panic",
+  "5. When the network dies",
   "6. Knowledgable brain: memory that knows what to keep and when to forget",
-  "7. one patient, many records",
+  "7. One patient, many records",
 ] as const;
 
 export function ProblemStatementCard({
@@ -244,9 +244,9 @@ export function ProblemStatementCard({
                 </SelectTrigger>
                 <SelectContent className="max-h-72">
                   {problemStatement &&
-                  !PROBLEM_STATEMENTS.includes(
-                    problemStatement as (typeof PROBLEM_STATEMENTS)[number],
-                  ) ? (
+                    !PROBLEM_STATEMENTS.includes(
+                      problemStatement as (typeof PROBLEM_STATEMENTS)[number],
+                    ) ? (
                     <SelectItem value={problemStatement} className="cursor-pointer py-2">
                       {problemStatement} (Current)
                     </SelectItem>
