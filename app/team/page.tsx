@@ -253,7 +253,7 @@ export default function TeamDashboardPage() {
             <div className="rounded-xl border border-border bg-card p-3.5 flex items-center justify-between gap-3">
               <div className="space-y-0.5">
                 <p className="text-xs font-semibold text-foreground">
-                  Final Deliverables (PPT, Video, Code)
+                  Final Deliverables (PPT, Code)
                 </p>
                 <p className="text-[11px] text-muted-foreground">
                   {hasFinalSubmitted

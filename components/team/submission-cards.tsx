@@ -379,7 +379,7 @@ export function FinalDeliverablesCard({
     setSuccess(null);
 
     if (!driveLink.trim()) {
-      setError("Google Drive link is required (must contain presentation PPT & video demo).");
+      setError("Google Drive link is required (must contain presentation PPT).");
       return;
     }
 
@@ -422,7 +422,7 @@ export function FinalDeliverablesCard({
             </CardTitle>
           </div>
           <CardDescription>
-            Required at the end of the hackathon for final evaluation. Drive folder must contain PPT and demo video.
+            Required at the end of the hackathon for final evaluation. Drive folder must contain PPT.
           </CardDescription>
         </div>
 
@@ -493,7 +493,7 @@ export function FinalDeliverablesCard({
           </p>
           <ul className="list-disc pl-5 space-y-0.5">
             <li>
-              <strong className="text-foreground">Drive Link:</strong> Must contain your pitch presentation (PPT) and demo video. Verify link access is set to <em>&quot;Anyone with the link can view&quot;</em>.
+              <strong className="text-foreground">Drive Link:</strong> Must contain your pitch presentation (PPT). Verify link access is set to <em>&quot;Anyone with the link can view&quot;</em>.
             </li>
             <li>
               <strong className="text-foreground">GitHub Link:</strong> Public repository containing your source code and documentation.
@@ -513,7 +513,7 @@ export function FinalDeliverablesCard({
                   <HardDrive className="size-4" />
                 </div>
                 <div className="min-w-0">
-                  <p className="text-xs font-medium text-muted-foreground">Google Drive Link (PPT + Video)</p>
+                  <p className="text-xs font-medium text-muted-foreground">Google Drive Link (PPT)</p>
                   <p className="text-sm font-mono truncate text-foreground">
                     {currentSubmission?.driveLink}
                   </p>
@@ -589,7 +589,7 @@ export function FinalDeliverablesCard({
             <div className="space-y-1.5">
               <Label htmlFor="drive-link" className="flex items-center gap-1.5">
                 <HardDrive className="size-3.5 text-primary" />
-                <span>Google Drive Folder Link (must contain ppt and video) <span className="text-destructive">*</span></span>
+                <span>Google Drive Folder Link (must contain ppt) <span className="text-destructive">*</span></span>
               </Label>
               <Input
                 id="drive-link"
