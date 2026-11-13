@@ -188,7 +188,7 @@ export default function TeamDashboardPage() {
               </h4>
 
               <div className="space-y-1">
-                {profile?.participants.slice(0, 3).map((p) => (
+                {profile?.participants.slice(0, 4).map((p) => (
                   <div
                     key={p.id}
                     className="flex items-center justify-between text-sm py-2 border-b border-border/50 last:border-0"
