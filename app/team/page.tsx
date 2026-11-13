@@ -293,7 +293,7 @@ export default function TeamDashboardPage() {
       </div>
 
       {/* Schedule / Timeline Preview Banner */}
-      <Card className="border-border">
+      {/* <Card className="border-border">
         <CardHeader className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between pb-3">
           <div>
             <CardTitle className="text-base flex items-center gap-2">
@@ -347,7 +347,7 @@ export default function TeamDashboardPage() {
             </div>
           )}
         </CardContent>
-      </Card>
+      </Card> */}
     </div>
   );
 }
